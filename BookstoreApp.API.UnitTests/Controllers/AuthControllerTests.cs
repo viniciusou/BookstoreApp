@@ -26,7 +26,7 @@ namespace BookstoreApp.API.UnitTests.Controllers
         }
 
         [Test]
-        public async Task Register_UsernameAlreadyExists_ReturnsBadRequest()
+        public async Task Register_UsernameAlreadyExists_ReturnsBadRequestResponse()
         {
             var userForRegisterDto = new UserForRegisterDto { Username = "A" };
             
@@ -54,7 +54,7 @@ namespace BookstoreApp.API.UnitTests.Controllers
         }
 
         [Test]
-        public async Task Register_WhenCalled_ReturnsCreatedStatus()
+        public async Task Register_WhenCalled_ReturnsCreatedResponse()
         {
             var userForRegisterDto = new UserForRegisterDto 
             {
@@ -68,7 +68,7 @@ namespace BookstoreApp.API.UnitTests.Controllers
         }
 
         [Test]
-        public async Task Login_UsernameOrPasswordInvalid_ReturnsUnauthorized()
+        public async Task Login_UsernameOrPasswordInvalid_ReturnsUnauthorizedResponse()
         {
             var userForLoginDto = new UserForLoginDto 
             {
@@ -99,7 +99,7 @@ namespace BookstoreApp.API.UnitTests.Controllers
         }
 
         [Test]
-        public async Task login_WhenCalled_ReturnsOkStatus()
+        public async Task login_WhenCalled_ReturnsOkResponse()
         {
             var userForLoginDto = new UserForLoginDto 
             {

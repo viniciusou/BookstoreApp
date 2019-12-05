@@ -31,9 +31,9 @@ namespace BookstoreApp.API.Data
 
         public async Task<IEnumerable<Book>> GetBooks()
         {
-            var users = await _context.Books.Include(p => p.Photos).ToListAsync();
+            var books = await _context.Books.Include(p => p.Photos).ToListAsync();
 
-            return users;
+            return books;
         }
 
         public async Task<bool> SaveAll()
