@@ -86,7 +86,8 @@
             "49": 0,
             "50": 0,
             "51": 0,
-            "52": 0
+            "52": 0,
+            "53": 0
           },
           "Branches": [
             {
@@ -109,12 +110,11 @@
         },
         "System.Void BookstoreApp.API.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
           "Lines": {
-            "56": 0,
             "57": 0,
             "58": 0,
             "59": 0,
             "60": 0,
-            "62": 0,
+            "61": 0,
             "63": 0,
             "64": 0,
             "65": 0,
@@ -128,19 +128,20 @@
             "73": 0,
             "74": 0,
             "75": 0,
-            "79": 0,
-            "81": 0,
-            "83": 0,
-            "85": 0,
-            "87": 0,
+            "76": 0,
+            "80": 0,
+            "82": 0,
+            "84": 0,
+            "86": 0,
             "88": 0,
             "89": 0,
             "90": 0,
-            "91": 0
+            "91": 0,
+            "92": 0
           },
           "Branches": [
             {
-              "Line": 57,
+              "Line": 58,
               "Offset": 9,
               "EndOffset": 11,
               "Path": 0,
@@ -148,7 +149,7 @@
               "Hits": 0
             },
             {
-              "Line": 57,
+              "Line": 58,
               "Offset": 9,
               "EndOffset": 22,
               "Path": 1,
@@ -156,7 +157,7 @@
               "Hits": 0
             },
             {
-              "Line": 63,
+              "Line": 64,
               "Offset": 30,
               "EndOffset": 32,
               "Path": 0,
@@ -164,7 +165,7 @@
               "Hits": 0
             },
             {
-              "Line": 63,
+              "Line": 64,
               "Offset": 30,
               "EndOffset": 55,
               "Path": 1,
@@ -172,7 +173,7 @@
               "Hits": 0
             },
             {
-              "Line": 81,
+              "Line": 82,
               "Offset": 76,
               "EndOffset": 78,
               "Path": 0,
@@ -180,7 +181,7 @@
               "Hits": 0
             },
             {
-              "Line": 81,
+              "Line": 82,
               "Offset": 76,
               "EndOffset": 101,
               "Path": 1,
@@ -188,7 +189,7 @@
               "Hits": 0
             },
             {
-              "Line": 87,
+              "Line": 88,
               "Offset": 128,
               "EndOffset": 130,
               "Path": 0,
@@ -196,7 +197,7 @@
               "Hits": 0
             },
             {
-              "Line": 87,
+              "Line": 88,
               "Offset": 128,
               "EndOffset": 153,
               "Path": 1,
@@ -220,7 +221,7 @@
           "Lines": {},
           "Branches": [
             {
-              "Line": 64,
+              "Line": 65,
               "Offset": 8,
               "EndOffset": 10,
               "Path": 0,
@@ -228,7 +229,7 @@
               "Hits": 0
             },
             {
-              "Line": 64,
+              "Line": 65,
               "Offset": 8,
               "EndOffset": 33,
               "Path": 1,
@@ -243,7 +244,7 @@
           "Lines": {},
           "Branches": [
             {
-              "Line": 68,
+              "Line": 69,
               "Offset": 73,
               "EndOffset": 78,
               "Path": 0,
@@ -251,7 +252,7 @@
               "Hits": 0
             },
             {
-              "Line": 71,
+              "Line": 72,
               "Offset": 166,
               "EndOffset": 168,
               "Path": 0,
@@ -259,7 +260,7 @@
               "Hits": 0
             },
             {
-              "Line": 71,
+              "Line": 72,
               "Offset": 166,
               "EndOffset": 233,
               "Path": 1,
@@ -267,7 +268,7 @@
               "Hits": 0
             },
             {
-              "Line": 68,
+              "Line": 69,
               "Offset": 73,
               "EndOffset": 242,
               "Path": 1,
@@ -1490,7 +1491,7 @@
             }
           ]
         },
-        "System.Void BookstoreApp.API.Data.AuthRepository::.ctor(BookstoreApp.API.Data.DataContext)": {
+        "System.Void BookstoreApp.API.Data.AuthRepository::.ctor(BookstoreApp.API.Data.IDataContext)": {
           "Lines": {
             "12": 0,
             "13": 0,
@@ -1603,8 +1604,8 @@
             },
             {
               "Line": 40,
-              "Offset": 265,
-              "EndOffset": 267,
+              "Offset": 256,
+              "EndOffset": 258,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 0
@@ -1612,15 +1613,15 @@
             {
               "Line": 31,
               "Offset": 14,
-              "EndOffset": 305,
+              "EndOffset": 296,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
             },
             {
               "Line": 40,
-              "Offset": 265,
-              "EndOffset": 334,
+              "Offset": 256,
+              "EndOffset": 325,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 0
@@ -1768,16 +1769,16 @@
           "Branches": [
             {
               "Line": 41,
-              "Offset": 53,
-              "EndOffset": 55,
+              "Offset": 44,
+              "EndOffset": 46,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
               "Line": 41,
-              "Offset": 53,
-              "EndOffset": 120,
+              "Offset": 44,
+              "EndOffset": 110,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
@@ -1790,25 +1791,33 @@
       "BookstoreApp.API.Data.DataContext": {
         "Microsoft.EntityFrameworkCore.DbSet`1<BookstoreApp.API.Models.User> BookstoreApp.API.Data.DataContext::get_Users()": {
           "Lines": {
-            "10": 0
+            "19": 0
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<BookstoreApp.API.Models.Book> BookstoreApp.API.Data.DataContext::get_Books()": {
           "Lines": {
-            "12": 0
+            "21": 0
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<BookstoreApp.API.Models.Photo> BookstoreApp.API.Data.DataContext::get_Photos()": {
           "Lines": {
-            "14": 0
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<System.Int32> BookstoreApp.API.Data.DataContext::SaveChangesAsync()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0
           },
           "Branches": []
         },
         "System.Void BookstoreApp.API.Data.DataContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<BookstoreApp.API.Data.DataContext>)": {
           "Lines": {
-            "8": 0
+            "17": 0
           },
           "Branches": []
         }

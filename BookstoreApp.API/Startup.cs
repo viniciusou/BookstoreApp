@@ -36,6 +36,7 @@ namespace BookstoreApp.API
             });
             services.AddCors();
             services.AddAutoMapper(typeof(BookstoreRepository).Assembly);
+            services.AddScoped<IDataContext, DataContext>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IBookstoreRepository, BookstoreRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

@@ -8,8 +8,8 @@ namespace BookstoreApp.API.Data
 {
     public class AuthRepository : IAuthRepository
     {
-        private readonly DataContext _context;
-        public AuthRepository(DataContext context)
+        private readonly IDataContext _context;
+        public AuthRepository(IDataContext context)
         {
             _context = context;
 
