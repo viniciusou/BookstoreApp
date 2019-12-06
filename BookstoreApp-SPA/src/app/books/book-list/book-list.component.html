@@ -1,0 +1,6 @@
+<div class="container mt-5">
+  <div class="row">
+    <div *ngFor="let book of books" class="col-lg-2 col-md-3 col-sm-6">
+      <app-book-card [book]="book"></app-book-card>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top img-thumbnail" src="{{book.photoUrl}}" alt="{{book.title}}">
+        <div class="card-body">
+          <div>
+            <strong>Author</strong>
+            <p>{{book.author}}</p>
+          </div>
+          <div>
+            <strong>Publisher</strong>
+            <p>{{book.publisher}}</p>
+          </div>
+          <div>
+            <strong>Registered</strong>
+            <p>{{book.dateAdded}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="tab-panel">
+        <tabset class="member-tabset">
+          <tab heading="Description">
+            <p>{{book.description}}</p>
+          </tab>
+          <tab heading="Photos">
+            <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+          </tab>
+        </tabset>
+      </div>
+    </div>
+  </div>
+</div>
