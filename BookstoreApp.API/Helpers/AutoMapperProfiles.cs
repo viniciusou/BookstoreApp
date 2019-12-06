@@ -12,10 +12,14 @@ namespace BookstoreApp.API.Helpers
             CreateMap<Book, BookForListDto>()
                 .ForMember(dest => dest.PhotoUrl, opt => 
                 opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).Url));
+            
             CreateMap<Book, BookForDetailedDto>()
                 .ForMember(dest => dest.PhotoUrl, opt => 
                 opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).Url));
+            
             CreateMap<Photo, PhotoForDetailedDto>();
+            
+            CreateMap<BookForUpdateDto, Book>();
         }
     }
 }

@@ -21,6 +21,9 @@ import { BookDetailComponent } from './books/book-detail/book-detail.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { BookDetailResolver } from './_resolvers/book-detail.resolver';
 import { BookListResolver } from './_resolvers/book-list.resolver';
+import { BookEditComponent } from './books/book-edit/book-edit.component';
+import { BookEditResolver } from './_resolvers/book-edit.resolver';
+import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -42,7 +45,8 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       BookListComponent,
       RegisterBookComponent,
       BookCardComponent,
-      BookDetailComponent
+      BookDetailComponent,
+      BookEditComponent
    ],
    imports: [
       BrowserModule,
@@ -62,9 +66,11 @@ export class CustomHammerConfig extends HammerGestureConfig  {
    ],
    providers: [
       AuthService,
+      PreventUnsavedChanges,
       ErrorInterceptorProvider,
       AuthGuard,
       BookDetailResolver,
+      BookEditResolver,
       BookListResolver,
       { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
    ],

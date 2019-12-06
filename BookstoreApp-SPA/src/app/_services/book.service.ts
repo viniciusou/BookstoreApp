@@ -20,5 +20,9 @@ constructor(private http: HttpClient) { }
   getBook(id): Observable<Book> {
     return this.http.get<Book>(this.baseUrl + 'books/' + id);
   }
+
+  updateBook(book: Book) {
+    return this.http.put(this.baseUrl + 'books/' + book.id, book);
+  }
 }
 

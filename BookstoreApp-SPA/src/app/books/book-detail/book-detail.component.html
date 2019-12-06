@@ -1,5 +1,13 @@
 <div class="container mt-4">
   <div class="row">
+    <div class="col-sm-10">
+      <h1>{{book.title}}</h1>
+    </div>
+    <div class="col-sm-2 align-self-center">
+      <button class="btn btn-primary w-100" [routerLink]="['/books/edit/', book.id]" >Edit Book</button>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-sm-4">
       <div class="card">
         <img class="card-img-top img-thumbnail" src="{{book.photoUrl}}" alt="{{book.title}}">

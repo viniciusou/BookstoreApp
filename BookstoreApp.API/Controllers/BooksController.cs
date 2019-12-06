@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -39,6 +40,19 @@ namespace BookstoreApp.API.Controllers
             var bookToReturn = _mapper.Map<BookForDetailedDto>(book);
             
             return Ok(bookToReturn);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateBook(int id, BookForUpdateDto bookForUpdateDto)
+        {
+            var bookFromRepo = await _repo.GetBook(id);
+
+            _mapper.Map(bookForUpdateDto, bookFromRepo);
+
+            if (await _repo.SaveAll())
+                return NoContent();
+
+            throw new Exception($"Updating book {id} failed on save");
         }
     }
 }
