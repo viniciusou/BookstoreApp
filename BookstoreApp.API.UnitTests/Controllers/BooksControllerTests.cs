@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using BookstoreApp.API.Controllers;
 using BookstoreApp.API.Data;
+using BookstoreApp.API.Dtos;
 using BookstoreApp.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
@@ -47,9 +48,11 @@ namespace BookstoreApp.API.UnitTests.Controllers
         [Test]
         public async Task GetBook_WhenCalled_RetrievesBookFromDb()
         {
-            await _controller.GetBook(It.IsAny<int>());
+            var id = 1;
 
-            _repo.Verify(r => r.GetBook(It.IsAny<int>()));
+            await _controller.GetBook(id);
+
+            _repo.Verify(r => r.GetBook(id));
         }
 
         [Test]
@@ -61,6 +64,43 @@ namespace BookstoreApp.API.UnitTests.Controllers
             var result = await _controller.GetBook(book.Id);
 
             Assert.That(result, Is.TypeOf<OkObjectResult>());
+        }
+
+        [Test]
+        public async Task UpdateBook_WhenCalled_RetrievesBookFromDb()
+        {
+            var id = 1;
+
+            _repo.Setup(r => r.SaveAll()).Returns(Task.FromResult(true));
+            
+            await _controller.UpdateBook(id, It.IsAny<BookForUpdateDto>());
+
+            _repo.Verify(r => r.GetBook(id));
+        }
+
+        [Test]
+        public async Task UpdateBook_WhenCalled_ReturnsNoContentResult()
+        {
+            var id = 1;
+
+            _repo.Setup(r => r.GetBook(id)).Returns(Task.FromResult(It.IsAny<Book>()));
+
+            _repo.Setup(r => r.SaveAll()).Returns(Task.FromResult(true));
+
+            var result = await _controller.UpdateBook(id, It.IsAny<BookForUpdateDto>());
+
+            Assert.That(result, Is.TypeOf<NoContentResult>());
+        }
+
+        [Test]
+        public void UpdateBook_BookBeUpdateFails_ReturnsException()
+        {
+            _repo.Setup(r => r.GetBook(It.IsAny<int>())).Returns(Task.FromResult(It.IsAny<Book>()));
+
+            _repo.Setup(r => r.SaveAll()).Returns(Task.FromResult(false));
+
+            Assert.That(async() => await _controller.UpdateBook(It.IsAny<int>(), It.IsAny<BookForUpdateDto>()),
+                Throws.Exception);
         }
     }
 }
