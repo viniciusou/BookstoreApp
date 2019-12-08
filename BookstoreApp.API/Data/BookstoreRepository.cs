@@ -7,8 +7,8 @@ namespace BookstoreApp.API.Data
 {
     public class BookstoreRepository : IBookstoreRepository
     {
-        private readonly DataContext _context;
-        public BookstoreRepository(DataContext context)
+        private readonly IDataContext _context;
+        public BookstoreRepository(IDataContext context)
         {
             _context = context;
         }

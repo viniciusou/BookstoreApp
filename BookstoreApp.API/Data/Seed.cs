@@ -8,7 +8,7 @@ namespace BookstoreApp.API.Data
 {
     public class Seed
     {
-        public static void SeedBooks(DataContext context)
+        public static void SeedBooks(IDataContext context)
         {
             if (!context.Books.Any())
             {

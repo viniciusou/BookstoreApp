@@ -9,6 +9,11 @@ namespace BookstoreApp.API.Data
         DbSet<Book> Books { get; set; }
         DbSet<Photo> Photos { get; set; }
 
+        void Add<T>(T entity);
+        void Remove<T>(T entity);
+
+        void SaveChanges();
+
         System.Threading.Tasks.Task<int> SaveChangesAsync();
     }
 
@@ -21,6 +26,21 @@ namespace BookstoreApp.API.Data
         public DbSet<Book> Books { get; set; }
 
         public DbSet<Photo> Photos { get; set; }
+
+        public new void Add<T>(T entity)
+        {
+            base.Add(entity);
+        }
+
+        public new void Remove<T>(T entity)
+        {
+            base.Remove(entity);
+        }
+
+        public new void SaveChanges()
+        {
+            base.SaveChanges();
+        }
 
         public System.Threading.Tasks.Task<int> SaveChangesAsync()
         {
