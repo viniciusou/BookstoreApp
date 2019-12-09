@@ -20,6 +20,10 @@ namespace BookstoreApp.API.Helpers
             CreateMap<Photo, PhotoForDetailedDto>();
             
             CreateMap<BookForUpdateDto, Book>();
+
+            CreateMap<Photo, PhotoForReturnDto>();
+
+            CreateMap<PhotoForCreationDto, Photo>();
         }
     }
 }

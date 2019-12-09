@@ -42,4 +42,8 @@ export class BookEditComponent implements OnInit {
     });
   }
 
+  updateMainPhoto(photoUrl) {
+    this.book.photoUrl = photoUrl;
+  }
+
 }

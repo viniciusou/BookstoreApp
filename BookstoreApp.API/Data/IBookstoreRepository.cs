@@ -16,5 +16,8 @@ namespace BookstoreApp.API.Data
 
          Task<Book> GetBook(int id);
 
+         Task<Photo> GetPhoto(int id);
+
+         Task<Photo> GetMainPhotoForBook(int bookId);
     }
 }

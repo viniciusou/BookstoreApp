@@ -24,5 +24,13 @@ constructor(private http: HttpClient) { }
   updateBook(book: Book) {
     return this.http.put(this.baseUrl + 'books/' + book.id, book);
   }
+
+  setMainPhoto(bookId: number, id: number) {
+    return this.http.post(this.baseUrl + 'books/' + bookId + '/photos/' + id + '/setMain', {});
+  }
+
+  deletePhoto(bookId: number, id: number) {
+    return this.http.delete(this.baseUrl + 'books/' + bookId + '/photos/' + id);
+  }
 }
 
