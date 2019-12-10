@@ -65,16 +65,16 @@ DA:50,0
 DA:51,0
 DA:52,0
 DA:53,0
+DA:54,0
 BRDA:33,34,0,0
 BRDA:33,34,1,0
-FN:56,System.Void BookstoreApp.API.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+FN:57,System.Void BookstoreApp.API.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
 FNDA:0,System.Void BookstoreApp.API.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
-DA:57,0
 DA:58,0
 DA:59,0
 DA:60,0
 DA:61,0
-DA:63,0
+DA:62,0
 DA:64,0
 DA:65,0
 DA:66,0
@@ -88,30 +88,31 @@ DA:73,0
 DA:74,0
 DA:75,0
 DA:76,0
-DA:80,0
-DA:82,0
-DA:84,0
-DA:86,0
-DA:88,0
+DA:77,0
+DA:81,0
+DA:83,0
+DA:85,0
+DA:87,0
 DA:89,0
 DA:90,0
 DA:91,0
 DA:92,0
-BRDA:58,9,0,0
-BRDA:58,9,1,0
-BRDA:64,30,0,0
-BRDA:64,30,1,0
-BRDA:82,76,0,0
-BRDA:82,76,1,0
-BRDA:88,128,0,0
-BRDA:88,128,1,0
+DA:93,0
+BRDA:59,9,0,0
+BRDA:59,9,1,0
+BRDA:65,30,0,0
+BRDA:65,30,1,0
+BRDA:83,76,0,0
+BRDA:83,76,1,0
+BRDA:89,128,0,0
+BRDA:89,128,1,0
 FN:20,System.Void BookstoreApp.API.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)
 FNDA:0,System.Void BookstoreApp.API.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)
 DA:21,0
 DA:22,0
 DA:23,0
 DA:24,0
-LF:57
+LF:58
 LH:0
 BRF:16
 BRH:0
@@ -120,11 +121,11 @@ FNH:0
 end_of_record
 SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Models/Book.cs
 FN:7,System.Int32 BookstoreApp.API.Models.Book::get_Id()
-FNDA:14,System.Int32 BookstoreApp.API.Models.Book::get_Id()
-DA:8,14
+FNDA:71,System.Int32 BookstoreApp.API.Models.Book::get_Id()
+DA:8,71
 FN:8,System.String BookstoreApp.API.Models.Book::get_Title()
-FNDA:28,System.String BookstoreApp.API.Models.Book::get_Title()
-DA:9,28
+FNDA:44,System.String BookstoreApp.API.Models.Book::get_Title()
+DA:9,44
 FN:9,System.String BookstoreApp.API.Models.Book::get_Author()
 FNDA:20,System.String BookstoreApp.API.Models.Book::get_Author()
 DA:10,20
@@ -141,8 +142,8 @@ FN:13,System.DateTime BookstoreApp.API.Models.Book::get_DateModified()
 FNDA:20,System.DateTime BookstoreApp.API.Models.Book::get_DateModified()
 DA:14,20
 FN:14,System.Collections.Generic.ICollection`1<BookstoreApp.API.Models.Photo> BookstoreApp.API.Models.Book::get_Photos()
-FNDA:40,System.Collections.Generic.ICollection`1<BookstoreApp.API.Models.Photo> BookstoreApp.API.Models.Book::get_Photos()
-DA:15,40
+FNDA:69,System.Collections.Generic.ICollection`1<BookstoreApp.API.Models.Photo> BookstoreApp.API.Models.Book::get_Photos()
+DA:15,69
 LF:8
 LH:8
 BRF:0
@@ -152,8 +153,8 @@ FNH:8
 end_of_record
 SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Models/Photo.cs
 FN:6,System.Int32 BookstoreApp.API.Models.Photo::get_Id()
-FNDA:0,System.Int32 BookstoreApp.API.Models.Photo::get_Id()
-DA:7,0
+FNDA:61,System.Int32 BookstoreApp.API.Models.Photo::get_Id()
+DA:7,61
 FN:7,System.String BookstoreApp.API.Models.Photo::get_Url()
 FNDA:20,System.String BookstoreApp.API.Models.Photo::get_Url()
 DA:8,20
@@ -164,20 +165,23 @@ FN:9,System.DateTime BookstoreApp.API.Models.Photo::get_DateAdded()
 FNDA:20,System.DateTime BookstoreApp.API.Models.Photo::get_DateAdded()
 DA:10,20
 FN:10,System.Boolean BookstoreApp.API.Models.Photo::get_IsMain()
-FNDA:20,System.Boolean BookstoreApp.API.Models.Photo::get_IsMain()
-DA:11,20
-FN:11,BookstoreApp.API.Models.Book BookstoreApp.API.Models.Photo::get_Book()
+FNDA:71,System.Boolean BookstoreApp.API.Models.Photo::get_IsMain()
+DA:11,71
+FN:11,System.String BookstoreApp.API.Models.Photo::get_PublicId()
+FNDA:6,System.String BookstoreApp.API.Models.Photo::get_PublicId()
+DA:12,6
+FN:12,BookstoreApp.API.Models.Book BookstoreApp.API.Models.Photo::get_Book()
 FNDA:0,BookstoreApp.API.Models.Book BookstoreApp.API.Models.Photo::get_Book()
-DA:12,0
-FN:12,System.Int32 BookstoreApp.API.Models.Photo::get_BookId()
-FNDA:0,System.Int32 BookstoreApp.API.Models.Photo::get_BookId()
 DA:13,0
-LF:7
-LH:4
+FN:13,System.Int32 BookstoreApp.API.Models.Photo::get_BookId()
+FNDA:9,System.Int32 BookstoreApp.API.Models.Photo::get_BookId()
+DA:14,9
+LF:8
+LH:7
 BRF:0
 BRH:0
-FNF:7
-FNH:4
+FNF:8
+FNH:7
 end_of_record
 SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Models/User.cs
 FN:6,System.Int32 BookstoreApp.API.Models.User::get_Id()
@@ -607,6 +611,142 @@ BRH:0
 FNF:1
 FNH:0
 end_of_record
+SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Migrations/20191209114621_AddedPublicId.cs
+FN:7,System.Void BookstoreApp.API.Migrations.AddedPublicId::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void BookstoreApp.API.Migrations.AddedPublicId::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+FN:15,System.Void BookstoreApp.API.Migrations.AddedPublicId::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void BookstoreApp.API.Migrations.AddedPublicId::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+LF:11
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Migrations/20191209114621_AddedPublicId.Designer.cs
+FN:15,System.Void BookstoreApp.API.Migrations.AddedPublicId::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void BookstoreApp.API.Migrations.AddedPublicId::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:16,0
+DA:18,0
+DA:19,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:116,0
+BRDA:21,30,0,0
+BRDA:21,30,1,0
+BRDA:50,73,0,0
+BRDA:50,73,1,0
+BRDA:81,116,0,0
+BRDA:81,116,1,0
+BRDA:107,159,0,0
+BRDA:107,159,1,0
+LF:95
+LH:0
+BRF:8
+BRH:0
+FNF:1
+FNH:0
+end_of_record
 SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Migrations/DataContextModelSnapshot.cs
 FN:13,System.Void BookstoreApp.API.Migrations.DataContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
 FNDA:0,System.Void BookstoreApp.API.Migrations.DataContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
@@ -668,9 +808,9 @@ DA:71,0
 DA:72,0
 DA:73,0
 DA:74,0
+DA:75,0
 DA:76,0
 DA:77,0
-DA:78,0
 DA:79,0
 DA:80,0
 DA:81,0
@@ -693,24 +833,27 @@ DA:97,0
 DA:98,0
 DA:99,0
 DA:100,0
+DA:101,0
 DA:102,0
 DA:103,0
-DA:104,0
 DA:105,0
 DA:106,0
 DA:107,0
 DA:108,0
 DA:109,0
+DA:110,0
 DA:111,0
+DA:112,0
+DA:114,0
 BRDA:19,30,0,0
 BRDA:19,30,1,0
 BRDA:48,73,0,0
 BRDA:48,73,1,0
-BRDA:76,116,0,0
-BRDA:76,116,1,0
-BRDA:102,159,0,0
-BRDA:102,159,1,0
-LF:92
+BRDA:79,116,0,0
+BRDA:79,116,1,0
+BRDA:105,159,0,0
+BRDA:105,159,1,0
+LF:95
 LH:0
 BRF:8
 BRH:0
@@ -730,17 +873,36 @@ DA:17,0
 DA:18,0
 DA:20,0
 DA:22,0
-DA:23,0
+DA:24,0
+DA:26,0
+DA:27,0
 BRDA:12,77,0,0
 BRDA:12,77,1,0
 BRDA:16,177,0,0
 BRDA:16,177,1,0
-LF:11
+LF:13
 LH:0
 BRF:4
 BRH:0
 FNF:1
 FNH:0
+end_of_record
+SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Helpers/CloudinarySettings.cs
+FN:4,System.String BookstoreApp.API.Helpers.CloudinarySettings::get_CloudName()
+FNDA:28,System.String BookstoreApp.API.Helpers.CloudinarySettings::get_CloudName()
+DA:5,28
+FN:5,System.String BookstoreApp.API.Helpers.CloudinarySettings::get_ApiKey()
+FNDA:14,System.String BookstoreApp.API.Helpers.CloudinarySettings::get_ApiKey()
+DA:6,14
+FN:6,System.String BookstoreApp.API.Helpers.CloudinarySettings::get_ApiSecret()
+FNDA:14,System.String BookstoreApp.API.Helpers.CloudinarySettings::get_ApiSecret()
+DA:7,14
+LF:3
+LH:3
+BRF:0
+BRH:0
+FNF:3
+FNH:3
 end_of_record
 SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Helpers/Extensions.cs
 FN:7,System.Void BookstoreApp.API.Helpers.Extensions::AddApplicationError(Microsoft.AspNetCore.Http.HttpResponse,System.String)
@@ -829,6 +991,35 @@ BRH:0
 FNF:2
 FNH:0
 end_of_record
+SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Dtos/PhotoForCreationDto.cs
+FN:7,System.String BookstoreApp.API.Dtos.PhotoForCreationDto::get_Url()
+FNDA:3,System.String BookstoreApp.API.Dtos.PhotoForCreationDto::get_Url()
+DA:8,3
+FN:8,Microsoft.AspNetCore.Http.IFormFile BookstoreApp.API.Dtos.PhotoForCreationDto::get_File()
+FNDA:6,Microsoft.AspNetCore.Http.IFormFile BookstoreApp.API.Dtos.PhotoForCreationDto::get_File()
+DA:9,6
+FN:9,System.String BookstoreApp.API.Dtos.PhotoForCreationDto::get_Description()
+FNDA:3,System.String BookstoreApp.API.Dtos.PhotoForCreationDto::get_Description()
+DA:10,3
+FN:10,System.DateTime BookstoreApp.API.Dtos.PhotoForCreationDto::get_DateAdded()
+FNDA:3,System.DateTime BookstoreApp.API.Dtos.PhotoForCreationDto::get_DateAdded()
+DA:11,3
+FN:11,System.String BookstoreApp.API.Dtos.PhotoForCreationDto::get_PublicId()
+FNDA:3,System.String BookstoreApp.API.Dtos.PhotoForCreationDto::get_PublicId()
+DA:12,3
+FN:13,System.Void BookstoreApp.API.Dtos.PhotoForCreationDto::.ctor()
+FNDA:3,System.Void BookstoreApp.API.Dtos.PhotoForCreationDto::.ctor()
+DA:14,3
+DA:15,3
+DA:16,3
+DA:17,3
+LF:9
+LH:9
+BRF:0
+BRH:0
+FNF:6
+FNH:6
+end_of_record
 SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Dtos/PhotoForDetailedDto.cs
 FN:6,System.Int32 BookstoreApp.API.Dtos.PhotoForDetailedDto::get_Id()
 FNDA:0,System.Int32 BookstoreApp.API.Dtos.PhotoForDetailedDto::get_Id()
@@ -850,6 +1041,32 @@ LH:0
 BRF:0
 BRH:0
 FNF:5
+FNH:0
+end_of_record
+SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Dtos/PhotoForReturnDto.cs
+FN:6,System.Int32 BookstoreApp.API.Dtos.PhotoForReturnDto::get_Id()
+FNDA:0,System.Int32 BookstoreApp.API.Dtos.PhotoForReturnDto::get_Id()
+DA:7,0
+FN:7,System.String BookstoreApp.API.Dtos.PhotoForReturnDto::get_Url()
+FNDA:0,System.String BookstoreApp.API.Dtos.PhotoForReturnDto::get_Url()
+DA:8,0
+FN:8,System.String BookstoreApp.API.Dtos.PhotoForReturnDto::get_Description()
+FNDA:0,System.String BookstoreApp.API.Dtos.PhotoForReturnDto::get_Description()
+DA:9,0
+FN:9,System.DateTime BookstoreApp.API.Dtos.PhotoForReturnDto::get_DateAdded()
+FNDA:0,System.DateTime BookstoreApp.API.Dtos.PhotoForReturnDto::get_DateAdded()
+DA:10,0
+FN:10,System.Boolean BookstoreApp.API.Dtos.PhotoForReturnDto::get_IsMain()
+FNDA:0,System.Boolean BookstoreApp.API.Dtos.PhotoForReturnDto::get_IsMain()
+DA:11,0
+FN:11,System.String BookstoreApp.API.Dtos.PhotoForReturnDto::get_PublicId()
+FNDA:0,System.String BookstoreApp.API.Dtos.PhotoForReturnDto::get_PublicId()
+DA:12,0
+LF:6
+LH:0
+BRF:0
+BRH:0
+FNF:6
 FNH:0
 end_of_record
 SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Dtos/UserForLoginDto.cs
@@ -960,48 +1177,61 @@ FNF:6
 FNH:6
 end_of_record
 SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Data/BookstoreRepository.cs
-FN:15,System.Void BookstoreApp.API.Data.BookstoreRepository::Add(T)
+FN:16,System.Void BookstoreApp.API.Data.BookstoreRepository::Add(T)
 FNDA:1,System.Void BookstoreApp.API.Data.BookstoreRepository::Add(T)
-DA:16,1
 DA:17,1
 DA:18,1
-FN:20,System.Void BookstoreApp.API.Data.BookstoreRepository::Delete(T)
+DA:19,1
+FN:21,System.Void BookstoreApp.API.Data.BookstoreRepository::Delete(T)
 FNDA:1,System.Void BookstoreApp.API.Data.BookstoreRepository::Delete(T)
-DA:21,1
 DA:22,1
 DA:23,1
-FN:10,System.Void BookstoreApp.API.Data.BookstoreRepository::.ctor(BookstoreApp.API.Data.IDataContext)
-FNDA:6,System.Void BookstoreApp.API.Data.BookstoreRepository::.ctor(BookstoreApp.API.Data.IDataContext)
-DA:11,6
-DA:12,6
-DA:13,6
-DA:14,6
-FN:25,System.Void BookstoreApp.API.Data.BookstoreRepository/<GetBook>d__4::MoveNext()
+DA:24,1
+FN:11,System.Void BookstoreApp.API.Data.BookstoreRepository::.ctor(BookstoreApp.API.Data.IDataContext)
+FNDA:8,System.Void BookstoreApp.API.Data.BookstoreRepository::.ctor(BookstoreApp.API.Data.IDataContext)
+DA:12,8
+DA:13,8
+DA:14,8
+DA:15,8
+FN:26,System.Void BookstoreApp.API.Data.BookstoreRepository/<GetBook>d__4::MoveNext()
 FNDA:1,System.Void BookstoreApp.API.Data.BookstoreRepository/<GetBook>d__4::MoveNext()
-DA:26,1
 DA:27,1
-DA:29,1
+DA:28,1
 DA:30,1
-BRDA:27,250,1,1
-FN:32,System.Void BookstoreApp.API.Data.BookstoreRepository/<GetBooks>d__5::MoveNext()
+DA:31,1
+BRDA:28,250,1,1
+FN:33,System.Void BookstoreApp.API.Data.BookstoreRepository/<GetBooks>d__5::MoveNext()
 FNDA:1,System.Void BookstoreApp.API.Data.BookstoreRepository/<GetBooks>d__5::MoveNext()
-DA:33,1
 DA:34,1
-DA:36,1
+DA:35,1
 DA:37,1
-BRDA:34,124,1,1
-FN:39,System.Void BookstoreApp.API.Data.BookstoreRepository/<SaveAll>d__6::MoveNext()
-FNDA:2,System.Void BookstoreApp.API.Data.BookstoreRepository/<SaveAll>d__6::MoveNext()
-DA:40,2
-DA:41,2
-DA:42,2
-BRDA:41,44,1,2
-LF:21
-LH:21
-BRF:3
-BRH:3
-FNF:6
-FNH:6
+DA:38,1
+BRDA:35,124,1,1
+FN:40,System.Void BookstoreApp.API.Data.BookstoreRepository/<GetPhoto>d__6::MoveNext()
+FNDA:1,System.Void BookstoreApp.API.Data.BookstoreRepository/<GetPhoto>d__6::MoveNext()
+DA:41,1
+DA:42,1
+DA:44,1
+DA:45,1
+BRDA:42,188,1,1
+FN:47,System.Void BookstoreApp.API.Data.BookstoreRepository/<GetMainPhotoForBook>d__7::MoveNext()
+FNDA:1,System.Void BookstoreApp.API.Data.BookstoreRepository/<GetMainPhotoForBook>d__7::MoveNext()
+DA:48,1
+DA:49,1
+DA:50,1
+BRDA:49,250,1,1
+FN:52,System.Void BookstoreApp.API.Data.BookstoreRepository/<SaveAll>d__8::MoveNext()
+FNDA:2,System.Void BookstoreApp.API.Data.BookstoreRepository/<SaveAll>d__8::MoveNext()
+DA:53,2
+DA:54,2
+DA:55,2
+BRDA:54,44,1,2
+LF:28
+LH:28
+BRF:5
+BRH:5
+FNF:8
+FNH:8
 end_of_record
 SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Data/DataContext.cs
 FN:23,Microsoft.EntityFrameworkCore.DbSet`1<BookstoreApp.API.Models.User> BookstoreApp.API.Data.DataContext::get_Users()
@@ -1175,4 +1405,147 @@ BRF:7
 BRH:7
 FNF:4
 FNH:4
+end_of_record
+SF:/home/viniciusou/Bookstore/BookstoreApp/BookstoreApp.API/Controllers/PhotosController.cs
+FN:26,System.Void BookstoreApp.API.Controllers.PhotosController::.ctor(BookstoreApp.API.Data.IBookstoreRepository,AutoMapper.IMapper,Microsoft.Extensions.Options.IOptions`1<BookstoreApp.API.Helpers.CloudinarySettings>)
+FNDA:14,System.Void BookstoreApp.API.Controllers.PhotosController::.ctor(BookstoreApp.API.Data.IBookstoreRepository,AutoMapper.IMapper,Microsoft.Extensions.Options.IOptions`1<BookstoreApp.API.Helpers.CloudinarySettings>)
+DA:27,14
+DA:28,14
+DA:29,14
+DA:30,14
+DA:31,14
+DA:33,14
+DA:34,14
+DA:35,14
+DA:36,14
+DA:37,14
+DA:39,14
+DA:40,14
+FN:43,System.Void BookstoreApp.API.Controllers.PhotosController/<GetPhoto>d__5::MoveNext()
+FNDA:2,System.Void BookstoreApp.API.Controllers.PhotosController/<GetPhoto>d__5::MoveNext()
+DA:44,2
+DA:45,2
+DA:47,2
+DA:49,2
+DA:50,2
+BRDA:45,50,1,2
+FN:81,System.Boolean BookstoreApp.API.Controllers.PhotosController/<>c::<AddPhotoForUser>b__6_0(BookstoreApp.API.Models.Photo)
+FNDA:6,System.Boolean BookstoreApp.API.Controllers.PhotosController/<>c::<AddPhotoForUser>b__6_0(BookstoreApp.API.Models.Photo)
+DA:82,6
+FN:54,System.Void BookstoreApp.API.Controllers.PhotosController/<AddPhotoForUser>d__6::MoveNext()
+FNDA:3,System.Void BookstoreApp.API.Controllers.PhotosController/<AddPhotoForUser>d__6::MoveNext()
+DA:55,3
+DA:56,3
+DA:58,3
+DA:60,3
+DA:62,3
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:77,3
+DA:78,3
+DA:80,3
+DA:83,0
+DA:85,3
+DA:87,3
+DA:88,1
+DA:89,1
+DA:90,1
+DA:91,1
+DA:94,2
+DA:95,3
+BRDA:55,14,0,3
+BRDA:56,61,1,3
+BRDA:62,209,1,3
+BRDA:77,399,1,3
+BRDA:77,411,0,3
+BRDA:78,441,1,3
+BRDA:82,503,0,1
+BRDA:82,503,1,3
+BRDA:82,540,1,3
+BRDA:87,608,1,3
+BRDA:87,702,0,1
+BRDA:90,757,0,1
+BRDA:87,702,1,2
+FN:101,System.Boolean BookstoreApp.API.Controllers.PhotosController/<>c__DisplayClass7_0::<SetMainPhoto>b__0(BookstoreApp.API.Models.Photo)
+FNDA:11,System.Boolean BookstoreApp.API.Controllers.PhotosController/<>c__DisplayClass7_0::<SetMainPhoto>b__0(BookstoreApp.API.Models.Photo)
+DA:102,11
+FN:98,System.Void BookstoreApp.API.Controllers.PhotosController/<SetMainPhoto>d__7::MoveNext()
+FNDA:4,System.Void BookstoreApp.API.Controllers.PhotosController/<SetMainPhoto>d__7::MoveNext()
+DA:99,4
+DA:100,4
+DA:103,1
+DA:105,3
+DA:107,3
+DA:108,1
+DA:110,2
+DA:111,2
+DA:113,2
+DA:115,2
+DA:116,1
+DA:118,1
+DA:119,4
+BRDA:100,112,1,4
+BRDA:102,253,0,1
+BRDA:102,253,1,3
+BRDA:105,313,1,3
+BRDA:107,431,0,1
+BRDA:107,431,1,2
+BRDA:110,491,1,2
+BRDA:115,650,1,2
+BRDA:115,744,0,1
+BRDA:115,744,1,1
+FN:125,System.Boolean BookstoreApp.API.Controllers.PhotosController/<>c__DisplayClass8_0::<DetelePhoto>b__0(BookstoreApp.API.Models.Photo)
+FNDA:14,System.Boolean BookstoreApp.API.Controllers.PhotosController/<>c__DisplayClass8_0::<DetelePhoto>b__0(BookstoreApp.API.Models.Photo)
+DA:126,14
+FN:122,System.Void BookstoreApp.API.Controllers.PhotosController/<DetelePhoto>d__8::MoveNext()
+FNDA:5,System.Void BookstoreApp.API.Controllers.PhotosController/<DetelePhoto>d__8::MoveNext()
+DA:123,5
+DA:124,5
+DA:127,1
+DA:129,4
+DA:131,4
+DA:132,1
+DA:134,3
+DA:135,0
+DA:136,0
+DA:138,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:144,3
+DA:145,3
+DA:146,3
+DA:147,3
+DA:149,3
+DA:150,1
+DA:152,2
+DA:153,5
+BRDA:124,103,1,5
+BRDA:126,244,0,1
+BRDA:126,244,1,4
+BRDA:129,304,1,4
+BRDA:131,422,0,1
+BRDA:131,422,1,3
+BRDA:134,464,1,3
+BRDA:144,600,0,3
+BRDA:144,600,1,3
+BRDA:149,657,1,3
+BRDA:149,751,0,1
+BRDA:149,751,1,2
+LF:83
+LH:64
+BRF:36
+BRH:36
+FNF:8
+FNH:8
 end_of_record

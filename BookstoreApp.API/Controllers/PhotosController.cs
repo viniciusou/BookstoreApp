@@ -74,8 +74,8 @@ namespace BookstoreApp.API.Controllers
                 }
             }
 
-            photoForCreationDto.Url = uploadResult.Uri.ToString();
-            photoForCreationDto.PublicId = uploadResult.PublicId;
+            photoForCreationDto.Url = uploadResult?.Uri?.ToString();
+            photoForCreationDto.PublicId = uploadResult?.PublicId;
 
             var photo = _mapper.Map<Photo>(photoForCreationDto);
 
@@ -88,7 +88,7 @@ namespace BookstoreApp.API.Controllers
             {
                 var photoToReturn = _mapper.Map<PhotoForReturnDto>(photo);
                 return CreatedAtRoute("GetPhoto", 
-                    new { bookId = bookId, id = photo.Id}, photoToReturn);
+                    new { bookId = bookId, id = photo?.Id}, photoToReturn);
             }
 
             return BadRequest("Could not add the photo");

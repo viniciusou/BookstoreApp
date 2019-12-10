@@ -54,7 +54,7 @@ namespace BookstoreApp.API.UnitTests.Controllers
         }
 
         [Test]
-        public async Task Register_WhenCalled_ReturnsCreatedResponse()
+        public async Task Register_WhenCalled_ReturnsCreatedAtRouteResponse()
         {
             var userForRegisterDto = new UserForRegisterDto 
             {
@@ -64,7 +64,7 @@ namespace BookstoreApp.API.UnitTests.Controllers
 
             var result = await _controller.Register(userForRegisterDto);
             
-            Assert.That(result, Is.TypeOf<StatusCodeResult>());
+            Assert.That(result, Is.TypeOf<CreatedAtRouteResult>());
         }
 
         [Test]
