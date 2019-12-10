@@ -1,3 +1,67 @@
-<p>
-  register-book works!
-</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <form [formGroup]="registerBookForm" (ngSubmit)="registerBook()">
+        <h2 class="text-center text-primary">Register New Book</h2>
+        <hr>
+      
+        <div class="form-group">
+          <input type="text"
+            [ngClass]="{'is-invalid': registerBookForm.get('title').errors 
+              && registerBookForm.get('title').touched}" 
+            class="form-control" 
+            formControlName="title" 
+            placeholder="Title">
+          <div class="invalid-feedback">Please enter a title</div>
+        </div>
+      
+        <div class="form-group">
+          <input type="text"
+            [ngClass]="{'is-invalid': registerBookForm.get('author').errors 
+              && registerBookForm.get('author').touched}" 
+            class="form-control" 
+            formControlName="author" 
+            placeholder="Author">
+          <div class="invalid-feedback">Please enter author's name</div>
+        </div>
+      
+        <div class="form-group">
+          <input type="text"
+            [ngClass]="{'is-invalid': registerBookForm.get('publisher').errors 
+              && registerBookForm.get('publisher').touched}" 
+            class="form-control" 
+            formControlName="publisher" 
+            placeholder="Publisher">
+          <div class="invalid-feedback">Please enter a publisher's name</div>
+        </div>
+      
+        <div class="form-group">
+          <input type="text" bsDatepicker [bsConfig]="bsConfig"
+            [ngClass]="{'is-invalid': registerBookForm.get('dateOfRelease').errors 
+              && registerBookForm.get('dateOfRelease').touched}" 
+            class="form-control" 
+            formControlName="dateOfRelease" 
+            placeholder="Date of release">
+          <div class="invalid-feedback">Please enterthe date of release</div>
+        </div>
+      
+        <div class="form-group">
+          <textarea type="text" rows="5"
+            [ngClass]="{'is-invalid': registerBookForm.get('description').errors 
+              && registerBookForm.get('description').touched}" 
+            class="form-control" 
+            formControlName="description" 
+            placeholder="Description"></textarea>
+          <div class="invalid-feedback">Please enter a description</div>
+        </div>
+      
+      
+        <div class="form-group text-center">
+          <button class="btn btn-success" [disabled]="!registerBookForm.valid" type="submit">Register</button>
+          <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>

@@ -40,7 +40,7 @@ namespace BookstoreApp.API.Controllers
 
             var createdUser = await _repo.Register(userToCreate, userForRegisterDto.Password);
 
-            return StatusCode(201);
+            return CreatedAtRoute("GetBooks", new { controller = "Books"}, null);
         }
 
         [HttpPost("login")]

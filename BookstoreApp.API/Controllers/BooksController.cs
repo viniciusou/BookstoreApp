@@ -22,7 +22,7 @@ namespace BookstoreApp.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet(Name="GetBooks")]
         public async Task<IActionResult> GetBooks()
         {
             var books = await _repo.GetBooks();
