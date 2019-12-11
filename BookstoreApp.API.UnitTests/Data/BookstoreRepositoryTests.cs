@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MockQueryable.Moq;
 using System.Threading.Tasks;
+using BookstoreApp.API.Helpers;
 
 namespace BookstoreApp.API.UnitTests.Data
 {
@@ -55,14 +56,6 @@ namespace BookstoreApp.API.UnitTests.Data
             _context.Verify(c => c.Remove(_book));
         }
 
-        // [Test]
-        // public async Task GetBook_WhenCalled_RetrievesBookFromDb()
-        // {
-        //     await _bookstoreRepository.GetBook(_book.Id);
-
-        //     _context.Verify(c => c.Books.FirstOrDefault);
-        // }
-
         [Test]
         public async Task GetBook_WhenCalled_ReturnsBook()
         {
@@ -71,18 +64,10 @@ namespace BookstoreApp.API.UnitTests.Data
             Assert.That(result, Is.EqualTo(_book));
         }
 
-        // [Test]
-        // public async Task GetBooks_WhenCalled_RetrievesBooksFromDb()
-        // {
-        //     await _bookstoreRepository.GetBooks();
-            
-        //     _context.Verify(c => c.Books.ToListAsync(new System.Threading.CancellationToken()));
-        // }
-
         [Test]
         public async Task GetBooks_WhenCalled_ReturnsBooks()
         {
-            var result = await _bookstoreRepository.GetBooks();
+            var result = await _bookstoreRepository.GetBooks(new BookParams());
             
             Assert.That(result, Is.EqualTo(_books));
         }
@@ -102,14 +87,6 @@ namespace BookstoreApp.API.UnitTests.Data
 
             Assert.That(result, Is.False);
         }
-
-        // [Test]
-        // public async Task SaveAll_ThereAreChangesToDb_ReturnsTrue()
-        // {
-        //     var result = await _bookstoreRepository.SaveAll();
-            
-        //     Assert.That(result, Is.True);
-        // }
 
         [Test]
         public async Task GetPhoto_WhenCalled_ReturnsPhoto()

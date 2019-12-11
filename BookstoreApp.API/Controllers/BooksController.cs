@@ -30,8 +30,11 @@ namespace BookstoreApp.API.Controllers
 
             var booksToReturn = _mapper.Map<IEnumerable<BookForListDto>>(books);
             
-            Response.AddPagination(books.CurrentPage, books.PageSize, 
-                books.TotalCount, books.TotalPages);
+            if (books != null)
+            {
+                Response.AddPagination(books.CurrentPage, books.PageSize, 
+                    books.TotalCount, books.TotalPages);
+            }
 
             return Ok(booksToReturn);
         }

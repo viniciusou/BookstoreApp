@@ -1,9 +1,9 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using BookstoreApp.API.Controllers;
 using BookstoreApp.API.Data;
 using BookstoreApp.API.Dtos;
+using BookstoreApp.API.Helpers;
 using BookstoreApp.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
@@ -17,6 +17,7 @@ namespace BookstoreApp.API.UnitTests.Controllers
         private Mock<IBookstoreRepository> _repo;
         private Mock<IMapper> _mapper;
         private BooksController _controller;
+        private BookParams _bookParams;
 
         [SetUp]
         public void SetUp()
@@ -24,23 +25,25 @@ namespace BookstoreApp.API.UnitTests.Controllers
             _repo = new Mock<IBookstoreRepository>();
             _mapper = new Mock<IMapper>();
             _controller = new BooksController(_repo.Object, _mapper.Object);
+
+            _bookParams = new BookParams();
         }
 
         [Test]
         public async Task GetBooks_WhenCalled_RetrievesBooksFromDb()
         {
-            await _controller.GetBooks();
+            await _controller.GetBooks(_bookParams);
 
-            _repo.Verify(r => r.GetBooks());
+            _repo.Verify(r => r.GetBooks(_bookParams));
         }
 
         [Test]
         public async Task GetBooks_WhenCalled_ReturnsOkResponse()
         {   
-            _repo.Setup(r => r.GetBooks())
-                .Returns(Task.FromResult(It.IsAny<IEnumerable<Book>>()));
+            _repo.Setup(r => r.GetBooks(_bookParams))
+                .Returns(Task.FromResult(It.IsAny<PagedList<Book>>()));
 
-            var result = await _controller.GetBooks();
+            var result = await _controller.GetBooks(_bookParams);
 
             Assert.That(result, Is.TypeOf<OkObjectResult>());
         }
