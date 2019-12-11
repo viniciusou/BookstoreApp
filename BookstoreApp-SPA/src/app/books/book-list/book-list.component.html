@@ -1,6 +1,33 @@
-<div class="container mt-5">
-  <div class="row">
-    <div *ngFor="let book of books" class="col-lg-2 col-md-3 col-sm-6">
-      <app-book-card [book]="book"></app-book-card>
+<div class="container mt-3">
+    <div class="float-left ml-3">
+      <h2>Books registered - {{pagination.totalItems}}</h2>
+    </div>
+  <form class="form-inline" #form="ngForm" (ngSubmit)="loadBooks()" novalidate>
+    <div class="col">
+      <div class="btn-group float-right mt-3">
+        <button type="button" name="orderBy" class="btn btn-primary"
+          [(ngModel)]="bookParams.orderBy" (click)="loadBooks()" btnRadio="title">Title</button>
+        <button type="button" name="orderBy" class="btn btn-primary" 
+          [(ngModel)]="bookParams.orderBy" (click)="loadBooks()" btnRadio="dateadded">Newest books</button>
+      </div>
+    </div>
+  </form>
+  <br>
+  
+  <div class="container mt-5">
+    <div class="row">
+      <div *ngFor="let book of books" class="col-lg-2 col-md-3 col-sm-6">
+        <app-book-card [book]="book"></app-book-card>
+    </div>
+  </div>
+  
+  <div class="d-flex justify-content-center">
+    <pagination [boundaryLinks]="true" 
+      [totalItems]="pagination.totalItems"
+      [itemsPerPage]= "pagination.itemsPerPage"
+      [(ngModel)]="pagination.currentPage"
+      (pageChanged)="pageChanged($event)"
+      previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
+    </pagination>
   </div>
 </div>

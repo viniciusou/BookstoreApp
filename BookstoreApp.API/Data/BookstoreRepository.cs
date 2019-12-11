@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookstoreApp.API.Helpers;
 using BookstoreApp.API.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -30,11 +31,27 @@ namespace BookstoreApp.API.Data
             return book;
         }
 
-        public async Task<IEnumerable<Book>> GetBooks()
+        public async Task<PagedList<Book>> GetBooks(BookParams bookParams)
         {
-            var books = await _context.Books.Include(p => p.Photos).ToListAsync();
+            var books = _context.Books.Include(p => p.Photos).OrderBy(b => b.Title);
 
-            return books;
+            if (!string.IsNullOrEmpty(bookParams.OrderBy))
+            {
+                switch(bookParams.OrderBy)
+                {
+                    case "dateadded":
+                        books = books.OrderByDescending(b => b.DateAdded);
+                        break;
+                    case "datemodified":
+                        books = books.OrderByDescending(b => b.DateModified);
+                        break;
+                    default:
+                        books = books.OrderBy(b => b.Title);
+                        break;
+                }
+            }
+
+            return await PagedList<Book>.CreateAsync(books, bookParams.PageNumber, bookParams.PageSize);
         }
 
         public async Task<Photo> GetPhoto(int id)

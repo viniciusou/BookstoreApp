@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BookstoreApp.API.Helpers;
 using BookstoreApp.API.Models;
 
 namespace BookstoreApp.API.Data
@@ -12,7 +13,7 @@ namespace BookstoreApp.API.Data
 
          Task<bool> SaveAll();
 
-         Task<IEnumerable<Book>> GetBooks();
+         Task<PagedList<Book>> GetBooks(BookParams bookParams);
 
          Task<Book> GetBook(int id);
 
