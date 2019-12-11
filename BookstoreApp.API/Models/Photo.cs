@@ -10,7 +10,7 @@ namespace BookstoreApp.API.Models
         public DateTime DateAdded { get; set; }
         public bool IsMain { get; set; }
         public string PublicId { get; set; }
-        public Book Book { get; set; }
+        public virtual Book Book { get; set; }
         public int BookId { get; set; }
     }
 }

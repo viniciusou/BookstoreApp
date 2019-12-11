@@ -26,14 +26,14 @@ namespace BookstoreApp.API.Data
 
         public async Task<Book> GetBook(int id)
         {
-            var book = await _context.Books.Include(p => p.Photos).FirstOrDefaultAsync(b => b.Id == id);
+            var book = await _context.Books.FirstOrDefaultAsync(b => b.Id == id);
 
             return book;
         }
 
         public async Task<PagedList<Book>> GetBooks(BookParams bookParams)
         {
-            var books = _context.Books.Include(p => p.Photos).OrderBy(b => b.Title);
+            var books = _context.Books.OrderBy(b => b.Title);
 
             if (!string.IsNullOrEmpty(bookParams.OrderBy))
             {

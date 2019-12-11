@@ -12,6 +12,6 @@ namespace BookstoreApp.API.Models
         public string Description { get; set; }
         public DateTime DateAdded { get; set; }
         public DateTime DateModified { get; set; }
-        public ICollection<Photo> Photos { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
     }
 }
