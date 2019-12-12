@@ -5,8 +5,12 @@ using AutoMapper;
 using BookstoreApp.API.Data;
 using BookstoreApp.API.Dtos;
 using BookstoreApp.API.Helpers;
+using BookstoreApp.API.Models;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace BookstoreApp.API.Controllers
 {
@@ -17,22 +21,72 @@ namespace BookstoreApp.API.Controllers
     {
         private readonly IBookstoreRepository _repo;
         private readonly IMapper _mapper;
-        public BooksController(IBookstoreRepository repo, IMapper mapper)
+        private readonly IOptions<CloudinarySettings> _cloudinaryConfig;
+        private Cloudinary _cloudinary;
+
+        public BooksController(IBookstoreRepository repo, IMapper mapper, IOptions<CloudinarySettings> cloudinaryConfig)
         {
             _repo = repo;
             _mapper = mapper;
+            _cloudinaryConfig = cloudinaryConfig;
+
+            Account acc = new Account(
+                _cloudinaryConfig.Value.CloudName,
+                _cloudinaryConfig.Value.ApiKey,
+                _cloudinaryConfig.Value.ApiSecret
+            );
+
+            _cloudinary = new Cloudinary(acc);
         }
 
-        [HttpGet(Name="GetBooks")]
+        [HttpPost]
+        public async Task<IActionResult> AddBook(BookForCreationDto bookForCreationDto)
+        {
+            var book = _mapper.Map<Book>(bookForCreationDto);
+
+            _repo.Add(book);
+
+            if (await _repo.SaveAll())
+                return CreatedAtRoute("GetBooks", null);
+
+            return BadRequest("Could not add the book");
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteBook(int id)
+        {
+            var book = await _repo.GetBook(id);
+
+            if (book == null)
+                return Unauthorized();
+
+            foreach(var photo in book.Photos)
+            {
+                if(photo.PublicId != null)
+                {
+                    var deleteParams = new DeletionParams(photo.PublicId);
+                    _cloudinary.Destroy(deleteParams);
+                }
+            }
+
+            _repo.Delete(book);
+
+            if (await _repo.SaveAll())
+                return Ok();
+
+            return BadRequest("Failed to delete the book");
+        }
+
+        [HttpGet(Name = "GetBooks")]
         public async Task<IActionResult> GetBooks([FromQuery]BookParams bookParams)
         {
             var books = await _repo.GetBooks(bookParams);
 
             var booksToReturn = _mapper.Map<IEnumerable<BookForListDto>>(books);
-            
+
             if (books != null)
             {
-                Response.AddPagination(books.CurrentPage, books.PageSize, 
+                Response.AddPagination(books.CurrentPage, books.PageSize,
                     books.TotalCount, books.TotalPages);
             }
 
@@ -45,7 +99,7 @@ namespace BookstoreApp.API.Controllers
             var book = await _repo.GetBook(id);
 
             var bookToReturn = _mapper.Map<BookForDetailedDto>(book);
-            
+
             return Ok(bookToReturn);
         }
 

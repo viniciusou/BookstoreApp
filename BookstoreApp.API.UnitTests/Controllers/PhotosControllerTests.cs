@@ -65,36 +65,36 @@ namespace BookstoreApp.API.UnitTests.Controllers
         }
 
         [Test]
-        public async Task AddPhotoForUser_WhenCalled_PhotoIsAddedIntoRepository()
+        public async Task AddPhotoForBook_WhenCalled_PhotoIsAddedIntoRepository()
         {
             var mockFile = new FormFile(new MemoryStream(Encoding.UTF8.GetBytes("Mock file")), 0, 0, "Data", "mock.txt");
             var photoForCreationDto = new PhotoForCreationDto { Description = "description", File = mockFile };
             
-            await _controller.AddPhotoForUser(_book.Id, photoForCreationDto);
+            await _controller.AddPhotoForBook(_book.Id, photoForCreationDto);
 
             _repo.Verify(r => r.SaveAll());
         }
 
         [Test]
-        public async Task AddPhotoForUser_PhotoIsAddedIntoRepository_ReturnsCreatedAtRouteResponse()
+        public async Task AddPhotoForBook_PhotoIsAddedIntoRepository_ReturnsCreatedAtRouteResponse()
         {
             _repo.Setup(r => r.SaveAll()).Returns(Task.FromResult(true));
             var mockFile = new FormFile(new MemoryStream(Encoding.UTF8.GetBytes("Mock file")), 0, 0, "Data", "mock.txt");
             var photoForCreationDto = new PhotoForCreationDto { Description = "description", File = mockFile };
             
-            var result = await _controller.AddPhotoForUser(_book.Id, photoForCreationDto);
+            var result = await _controller.AddPhotoForBook(_book.Id, photoForCreationDto);
 
             Assert.That(result, Is.TypeOf<CreatedAtRouteResult>());
         }
         
         [Test]
-        public async Task AddPhotoForUser_PhotoIsNotAddedIntoRepository_ReturnsBadRequestResponse()
+        public async Task AddPhotoForBook_PhotoIsNotAddedIntoRepository_ReturnsBadRequestResponse()
         {
             _repo.Setup(r => r.SaveAll()).Returns(Task.FromResult(false));
             var mockFile = new FormFile(new MemoryStream(Encoding.UTF8.GetBytes("Mock file")), 0, 0, "Data", "mock.txt");
             var photoForCreationDto = new PhotoForCreationDto { Description = "description", File = mockFile };
             
-            var result = await _controller.AddPhotoForUser(_book.Id, photoForCreationDto);
+            var result = await _controller.AddPhotoForBook(_book.Id, photoForCreationDto);
 
             Assert.That(result, Is.TypeOf<BadRequestObjectResult>());
         }

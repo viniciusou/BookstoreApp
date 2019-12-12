@@ -50,7 +50,7 @@ namespace BookstoreApp.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddPhotoForUser(int bookId, 
+        public async Task<IActionResult> AddPhotoForBook(int bookId, 
             [FromForm]PhotoForCreationDto photoForCreationDto)
         {
             var bookFromRepo = await _repo.GetBook(bookId);
