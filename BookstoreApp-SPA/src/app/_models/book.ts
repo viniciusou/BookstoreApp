@@ -4,7 +4,7 @@ export interface Book {
     id: number;
     title: string;
     dateReleased: Date;
-    dateAdded: Date;
+    dateAdded: any;
     dateModified: Date;
     photoUrl: string;
     author?: string;
