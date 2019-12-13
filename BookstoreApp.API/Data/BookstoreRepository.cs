@@ -39,11 +39,14 @@ namespace BookstoreApp.API.Data
             {
                 switch(bookParams.OrderBy)
                 {
+                    case "datereleased":
+                        books = books.OrderByDescending(b => b.DateReleased);
+                        break;
                     case "dateadded":
                         books = books.OrderByDescending(b => b.DateAdded);
                         break;
-                    case "datemodified":
-                        books = books.OrderByDescending(b => b.DateModified);
+                    case "title":
+                        books = books.OrderBy(b => b.Title);
                         break;
                     default:
                         books = books.OrderBy(b => b.Title);

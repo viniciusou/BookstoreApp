@@ -1,14 +1,14 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-6">
-      <form [formGroup]="registerBookForm" (ngSubmit)="registerBook()">
+      <form [formGroup]="form" (ngSubmit)="registerBook()">
         <h2 class="text-center text-primary">Register New Book</h2>
         <hr>
       
         <div class="form-group">
           <input type="text"
-            [ngClass]="{'is-invalid': registerBookForm.get('title').errors 
-              && registerBookForm.get('title').touched}" 
+            [ngClass]="{'is-invalid': form.get('title').errors 
+              && form.get('title').touched}" 
             class="form-control" 
             formControlName="title" 
             placeholder="Title">
@@ -17,8 +17,8 @@
       
         <div class="form-group">
           <input type="text"
-            [ngClass]="{'is-invalid': registerBookForm.get('author').errors 
-              && registerBookForm.get('author').touched}" 
+            [ngClass]="{'is-invalid': form.get('author').errors 
+              && form.get('author').touched}" 
             class="form-control" 
             formControlName="author" 
             placeholder="Author">
@@ -27,8 +27,8 @@
       
         <div class="form-group">
           <input type="text"
-            [ngClass]="{'is-invalid': registerBookForm.get('publisher').errors 
-              && registerBookForm.get('publisher').touched}" 
+            [ngClass]="{'is-invalid': form.get('publisher').errors 
+              && form.get('publisher').touched}" 
             class="form-control" 
             formControlName="publisher" 
             placeholder="Publisher">
@@ -37,18 +37,18 @@
       
         <div class="form-group">
           <input type="text" bsDatepicker [bsConfig]="bsConfig"
-            [ngClass]="{'is-invalid': registerBookForm.get('dateOfRelease').errors 
-              && registerBookForm.get('dateOfRelease').touched}" 
+            [ngClass]="{'is-invalid': form.get('dateReleased').errors 
+              && form.get('dateReleased').touched}" 
             class="form-control" 
-            formControlName="dateOfRelease" 
+            formControlName="dateReleased" 
             placeholder="Date of release">
-          <div class="invalid-feedback">Please enterthe date of release</div>
+          <div class="invalid-feedback">Please enter the date of release</div>
         </div>
       
         <div class="form-group">
           <textarea type="text" rows="5"
-            [ngClass]="{'is-invalid': registerBookForm.get('description').errors 
-              && registerBookForm.get('description').touched}" 
+            [ngClass]="{'is-invalid': form.get('description').errors 
+              && form.get('description').touched}" 
             class="form-control" 
             formControlName="description" 
             placeholder="Description"></textarea>
@@ -57,7 +57,7 @@
       
       
         <div class="form-group text-center">
-          <button class="btn btn-success" [disabled]="!registerBookForm.valid" type="submit">Register</button>
+          <button class="btn btn-success" [disabled]="!form.valid" type="submit">Register</button>
           <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
         </div>
         

@@ -1,6 +1,6 @@
 <div class="card mb-4" [routerLink]="['/books/', book.id]">
   <div class="card-img-wrapper">
-    <img class="card-img-top" src="{{book.photoUrl}}" alt="{{book.title}}">
+    <img class="card-img-top" src="{{book.photoUrl || '../../../assets/book-placeholder.png'}}" alt="{{book.title}}">
   </div>
   <div class="card-body p-1">
     <h6 class="card-title text-center mb-1"><i class="fa fa-book"></i>

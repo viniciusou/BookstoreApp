@@ -21,7 +21,8 @@ export const appRoutes: Routes = [
       { path: 'books/:id', component: BookDetailComponent, resolve: {book: BookDetailResolver} },
       { path: 'books/edit/:id', component: BookEditComponent,
         resolve: {book: BookEditResolver}, canDeactivate: [PreventUnsavedChanges] },
-      { path: 'register-book', component: RegisterBookComponent }
+      { path: 'register-book', component: RegisterBookComponent,
+        canDeactivate: [PreventUnsavedChanges] }
     ]
   },
   { path: '**', redirectTo: '', pathMatch: 'full' }

@@ -1,161 +1,171 @@
 [
   {
-    "Title": "ALIQUA AD DOLOR",
-    "Author": "Charlene Mercer",
-    "Publisher": "ea culpa irure",
-    "Description": "Proident culpa velit excepteur fugiat sunt adipisicing exercitation sint. Velit tempor officia sunt est.",
-    "DateAdded": "2019-12-05",
-    "DateModified": "2019-12-05",
+    "Title": "ENIM EXERCITATION EU",
+    "Author": "Townsend Holmes",
+    "Publisher": "non occaecat reprehenderit",
+    "Description": "Aute officia commodo commodo aute nisi. Ex amet exercitation ea laborum incididunt.",
+    "DateReleased": "2005-09-18",
+    "DateAdded": "2019-12-13",
+    "DateModified": "2019-12-13",
     "Photos": [
       {
-        "url": "https://picsum.photos/id/168/128/128.jpg",
+        "url": "https://picsum.photos/id/805/128/128.jpg",
         "isMain": true,
-        "description": "Cillum ullamco esse eiusmod et officia exercitation reprehenderit ea.",
-        "dateAdded": "2019-12-05"
+        "description": "Amet velit enim deserunt deserunt irure amet tempor elit sunt proident.",
+        "dateAdded": "2019-12-13"
       }
     ]
   },
   {
-    "Title": "NISI AUTE DOLOR",
-    "Author": "Rhea Gallegos",
-    "Publisher": "aliqua deserunt aliqua",
-    "Description": "Nisi est mollit ea velit qui culpa nisi laboris nulla. Pariatur magna quis nostrud minim laboris enim dolore tempor deserunt in excepteur velit.",
-    "DateAdded": "2019-12-05",
-    "DateModified": "2019-12-05",
+    "Title": "DOLORE LABORE CILLUM",
+    "Author": "Higgins Graham",
+    "Publisher": "est dolore duis",
+    "Description": "Non commodo non elit ex aute. Non ex proident aliquip aliqua irure.",
+    "DateReleased": "1994-02-25",
+    "DateAdded": "2019-12-13",
+    "DateModified": "2019-12-13",
     "Photos": [
       {
-        "url": "https://picsum.photos/id/41/128/128.jpg",
+        "url": "https://picsum.photos/id/46/128/128.jpg",
         "isMain": true,
-        "description": "Laborum officia velit exercitation anim dolore sit ullamco amet.",
-        "dateAdded": "2019-12-05"
+        "description": "Id et id ad commodo.",
+        "dateAdded": "2019-12-13"
       }
     ]
   },
   {
-    "Title": "DUIS AD ESSE",
-    "Author": "Wise Coleman",
-    "Publisher": "velit Lorem magna",
-    "Description": "Non mollit Lorem id mollit eu incididunt ipsum proident labore ad fugiat non sit. Nisi occaecat consequat anim adipisicing cupidatat eu pariatur ullamco qui non in reprehenderit.",
-    "DateAdded": "2019-12-05",
-    "DateModified": "2019-12-05",
+    "Title": "SUNT EXERCITATION AD",
+    "Author": "Daisy Reed",
+    "Publisher": "proident ut consequat",
+    "Description": "Aliquip cupidatat tempor excepteur fugiat sunt enim. Eu nostrud ut amet incididunt ad ipsum quis ea culpa in excepteur.",
+    "DateReleased": "1999-08-19",
+    "DateAdded": "2019-12-13",
+    "DateModified": "2019-12-13",
     "Photos": [
       {
-        "url": "https://picsum.photos/id/981/128/128.jpg",
+        "url": "https://picsum.photos/id/508/128/128.jpg",
         "isMain": true,
-        "description": "Nostrud duis laborum fugiat sint commodo adipisicing magna proident nulla aute ullamco enim incididunt adipisicing.",
-        "dateAdded": "2019-12-05"
+        "description": "Velit aute reprehenderit sunt anim id Lorem sint consequat sit sint.",
+        "dateAdded": "2019-12-13"
       }
     ]
   },
   {
-    "Title": "ANIM REPREHENDERIT LABORUM",
-    "Author": "Rosalinda Gallagher",
-    "Publisher": "quis eu culpa",
-    "Description": "Ullamco ex quis aliquip quis. Consectetur pariatur ex ullamco quis exercitation aliquip.",
-    "DateAdded": "2019-12-05",
-    "DateModified": "2019-12-05",
+    "Title": "SUNT SINT ANIM",
+    "Author": "Harris Little",
+    "Publisher": "aliquip ad minim",
+    "Description": "Ipsum sit commodo ipsum cupidatat minim ullamco amet dolore anim ex sint. Aliquip eiusmod ullamco fugiat consequat consequat elit.",
+    "DateReleased": "2003-10-04",
+    "DateAdded": "2019-12-13",
+    "DateModified": "2019-12-13",
     "Photos": [
       {
-        "url": "https://picsum.photos/id/483/128/128.jpg",
+        "url": "https://picsum.photos/id/552/128/128.jpg",
         "isMain": true,
-        "description": "Ex aute do dolore ipsum et irure qui officia Lorem quis nulla et.",
-        "dateAdded": "2019-12-05"
+        "description": "Cillum in veniam nulla consequat do laboris dolor aute.",
+        "dateAdded": "2019-12-13"
       }
     ]
   },
   {
-    "Title": "OFFICIA SUNT SUNT",
-    "Author": "Stokes Holman",
-    "Publisher": "amet et veniam",
-    "Description": "Aliquip quis dolor consectetur cillum do cillum nostrud qui aute Lorem. Proident adipisicing aute esse est ipsum consectetur.",
-    "DateAdded": "2019-12-05",
-    "DateModified": "2019-12-05",
+    "Title": "LABORIS FUGIAT SINT",
+    "Author": "Kate Mclean",
+    "Publisher": "quis pariatur fugiat",
+    "Description": "Labore quis laborum consectetur aliqua ullamco et veniam sunt cillum sunt veniam officia. Qui quis exercitation non dolore.",
+    "DateReleased": "1994-12-18",
+    "DateAdded": "2019-12-13",
+    "DateModified": "2019-12-13",
     "Photos": [
       {
-        "url": "https://picsum.photos/id/236/128/128.jpg",
+        "url": "https://picsum.photos/id/763/128/128.jpg",
         "isMain": true,
-        "description": "Elit commodo ex deserunt et eiusmod cupidatat nisi non sunt amet sint ad Lorem eu.",
-        "dateAdded": "2019-12-05"
+        "description": "Veniam quis sint ex in veniam duis aliquip proident esse Lorem labore excepteur ea cillum.",
+        "dateAdded": "2019-12-13"
       }
     ]
   },
   {
-    "Title": "EX OFFICIA LABORIS",
-    "Author": "Marla Grimes",
-    "Publisher": "ea officia veniam",
-    "Description": "Commodo ipsum dolore officia reprehenderit labore est voluptate ipsum dolore incididunt excepteur aliqua laboris voluptate. Tempor enim aliqua occaecat in nostrud velit velit sint culpa consectetur qui.",
-    "DateAdded": "2019-12-05",
-    "DateModified": "2019-12-05",
+    "Title": "NON LABORIS MAGNA",
+    "Author": "Becky Hebert",
+    "Publisher": "elit ipsum culpa",
+    "Description": "Esse laboris deserunt do ipsum ex et elit velit commodo ex cupidatat. Ut exercitation sit sit nulla laboris id culpa duis velit officia exercitation.",
+    "DateReleased": "2016-09-06",
+    "DateAdded": "2019-12-13",
+    "DateModified": "2019-12-13",
     "Photos": [
       {
-        "url": "https://picsum.photos/id/60/128/128.jpg",
+        "url": "https://picsum.photos/id/522/128/128.jpg",
         "isMain": true,
-        "description": "Excepteur labore mollit duis dolor dolore aliquip consequat laborum est sunt incididunt sunt velit pariatur.",
-        "dateAdded": "2019-12-05"
+        "description": "Ad fugiat pariatur laborum ut elit sit sunt eiusmod.",
+        "dateAdded": "2019-12-13"
       }
     ]
   },
   {
-    "Title": "NON LABORE ID",
-    "Author": "Hilary Velasquez",
-    "Publisher": "fugiat fugiat dolore",
-    "Description": "Pariatur aute qui occaecat cupidatat nulla tempor ad anim occaecat excepteur ea. Magna nisi Lorem mollit est velit laboris duis consequat aute deserunt.",
-    "DateAdded": "2019-12-05",
-    "DateModified": "2019-12-05",
+    "Title": "OCCAECAT DOLOR QUI",
+    "Author": "Elisa Kirk",
+    "Publisher": "minim aliquip ullamco",
+    "Description": "Adipisicing laborum quis tempor aliqua consectetur pariatur laboris. Culpa labore do culpa proident enim nostrud anim excepteur qui incididunt ex dolore elit.",
+    "DateReleased": "2002-06-06",
+    "DateAdded": "2019-12-13",
+    "DateModified": "2019-12-13",
     "Photos": [
       {
-        "url": "https://picsum.photos/id/30/128/128.jpg",
+        "url": "https://picsum.photos/id/444/128/128.jpg",
         "isMain": true,
-        "description": "Quis amet voluptate qui incididunt consectetur irure ea incididunt velit.",
-        "dateAdded": "2019-12-05"
+        "description": "Dolore eu veniam ad reprehenderit labore occaecat occaecat excepteur dolor id commodo deserunt commodo.",
+        "dateAdded": "2019-12-13"
       }
     ]
   },
   {
-    "Title": "DESERUNT EU MAGNA",
-    "Author": "Kaitlin Blackburn",
-    "Publisher": "magna adipisicing aliqua",
-    "Description": "Magna excepteur do occaecat nulla esse non. Aliquip voluptate dolor deserunt ad nostrud sint sit excepteur eu incididunt deserunt occaecat eiusmod incididunt.",
-    "DateAdded": "2019-12-05",
-    "DateModified": "2019-12-05",
+    "Title": "MAGNA IPSUM QUI",
+    "Author": "Stacey Gutierrez",
+    "Publisher": "pariatur et do",
+    "Description": "Duis irure reprehenderit voluptate dolor eu aliquip nulla aliquip incididunt sit id exercitation. Dolore nulla occaecat duis magna incididunt anim quis non consequat id do.",
+    "DateReleased": "2018-03-11",
+    "DateAdded": "2019-12-13",
+    "DateModified": "2019-12-13",
     "Photos": [
       {
-        "url": "https://picsum.photos/id/433/128/128.jpg",
+        "url": "https://picsum.photos/id/325/128/128.jpg",
         "isMain": true,
-        "description": "Ad reprehenderit velit ex eu cillum duis in consectetur tempor laboris.",
-        "dateAdded": "2019-12-05"
+        "description": "Mollit esse non laboris cupidatat ullamco aliquip.",
+        "dateAdded": "2019-12-13"
       }
     ]
   },
   {
-    "Title": "DESERUNT DOLORE MOLLIT",
-    "Author": "Esperanza Webster",
-    "Publisher": "incididunt reprehenderit mollit",
-    "Description": "Dolor ipsum enim ullamco qui aute minim dolore. Nostrud eiusmod aute fugiat ut nulla sint laborum sit.",
-    "DateAdded": "2019-12-05",
-    "DateModified": "2019-12-05",
+    "Title": "PARIATUR DOLOR SUNT",
+    "Author": "Holloway Garner",
+    "Publisher": "dolor ad ex",
+    "Description": "Ipsum labore cillum sit eu consequat. Veniam consectetur sint ut nisi ipsum commodo amet irure.",
+    "DateReleased": "2002-04-16",
+    "DateAdded": "2019-12-13",
+    "DateModified": "2019-12-13",
     "Photos": [
       {
-        "url": "https://picsum.photos/id/757/128/128.jpg",
+        "url": "https://picsum.photos/id/398/128/128.jpg",
         "isMain": true,
-        "description": "Occaecat incididunt ipsum laboris minim excepteur dolore ut do enim minim et exercitation.",
-        "dateAdded": "2019-12-05"
+        "description": "Magna dolore adipisicing exercitation aute aute nisi mollit occaecat laboris pariatur in veniam.",
+        "dateAdded": "2019-12-13"
       }
     ]
   },
   {
-    "Title": "ANIM NISI VELIT",
-    "Author": "Jarvis Castaneda",
-    "Publisher": "ad amet adipisicing",
-    "Description": "Elit pariatur minim commodo proident laborum sunt minim labore ipsum ex anim mollit nulla. Duis quis dolore non ullamco amet occaecat quis dolor sit labore esse eu.",
-    "DateAdded": "2019-12-05",
-    "DateModified": "2019-12-05",
+    "Title": "MOLLIT VENIAM EXERCITATION",
+    "Author": "Greta Calderon",
+    "Publisher": "nulla culpa nostrud",
+    "Description": "Sit irure Lorem sint est adipisicing dolor excepteur ut officia ut consequat. Quis ullamco pariatur sunt incididunt anim duis exercitation ullamco cupidatat mollit excepteur consequat occaecat.",
+    "DateReleased": "1998-09-14",
+    "DateAdded": "2019-12-13",
+    "DateModified": "2019-12-13",
     "Photos": [
       {
-        "url": "https://picsum.photos/id/518/128/128.jpg",
+        "url": "https://picsum.photos/id/787/128/128.jpg",
         "isMain": true,
-        "description": "Occaecat aliquip et anim qui ut nulla tempor qui reprehenderit reprehenderit elit reprehenderit labore eu.",
-        "dateAdded": "2019-12-05"
+        "description": "Tempor officia velit fugiat et eiusmod.",
+        "dateAdded": "2019-12-13"
       }
     ]
   }

@@ -15,6 +15,14 @@ export class BookService {
 
 constructor(private http: HttpClient) { }
 
+  addBook(book: Book) {
+    return this.http.post(this.baseUrl + 'books', book);
+  }
+
+  deleteBook(id: number) {
+    return this.http.delete(this.baseUrl + 'books/' + id);
+  }
+
   getBooks(page?, itemsPerPage?, bookParams?): Observable<PaginatedResult<Book[]>> {
     const paginatedResult: PaginatedResult<Book[]> = new PaginatedResult<Book[]>();
 

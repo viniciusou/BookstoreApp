@@ -1,10 +1,10 @@
 <div class="container mt-5">
   <div *ngIf="!registerMode" style="text-align: center">
-    <h1>Bookstore</h1>
-    <p class="lead">Register to see Bookstore stock</p>
-    <div class="text-center">
-      <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">Register</button>
-      <button class="btn btn-info btn-lg">Learn more</button>
+    <h1>Bookstore Stock</h1>
+    <p *ngIf="!loggedIn()" class="lead">Register to see Bookstore stock</p>
+    <div class="text-center mt-3">
+      <button *ngIf="!loggedIn()" class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">Register</button>
+      <button *ngIf="loggedIn()" class="btn btn-info btn-lg" (click)="viewBooks()">View Books</button>
     </div>
   </div>
 

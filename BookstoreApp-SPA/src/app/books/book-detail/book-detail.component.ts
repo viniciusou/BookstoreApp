@@ -53,13 +53,4 @@ export class BookDetailComponent implements OnInit {
 
     return imageUrls;
   }
-
-  // loadBook() {
-  //   this.bookService.getBook(+this.route.snapshot.params['id']).subscribe((book: Book) => {
-  //     this.book = book;
-  //   }, error => {
-  //     this.alertify.error(error);
-  //   });
-  // }
-
 }

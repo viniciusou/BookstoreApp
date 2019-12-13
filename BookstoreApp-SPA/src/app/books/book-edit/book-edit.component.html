@@ -1,11 +1,11 @@
 <div class="container mt-4">
-    <div class="row">
+    <div class="row ml-1">
       <h1 class="edittitle">{{book.title}}</h1>
     </div>
     <div class="row">
       <div class="col-sm-4">
         <div class="card">
-          <img class="card-img-top img-thumbnail" src="{{book.photoUrl}}" alt="{{book.title}}">
+          <img class="card-img-top img-thumbnail" src="{{book.photoUrl || '../../../assets/book-placeholder.png'}}" alt="{{book.title}}">
           <div class="card-body">
             <div>
               <strong>Author</strong>
@@ -17,7 +17,10 @@
             </div>
           </div>
           <div class="card-footer">
-            <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success btn-block">Save Changes</button>
+              <div class="btn-group d-flex">
+                  <button [disabled]="!form.dirty" form="form" class="btn btn-success w-100">Save Changes</button>
+                  <button class="btn btn-danger w-100" (click)="deleteBook(book.id)">Delete Book</button>
+              </div>
           </div>
         </div>
       </div>
@@ -25,7 +28,7 @@
         <div class="tab-panel">
           <tabset class="member-tabset">
             <tab heading="Edit Book">
-              <form #editForm="ngForm" id="editForm" (ngSubmit)="updateBook()"> 
+              <form #form="ngForm" id="form" (ngSubmit)="updateBook()"> 
                 <h4>Publisher</h4>  
                 <input class="form-control" type="text" name="publisher" [(ngModel)]="book.publisher">
                 <h4 class="mt-4">Description</h4>
@@ -38,7 +41,7 @@
             </tab>
           </tabset>
         </div>
-        <div *ngIf="editForm.dirty" class="alert alert-info mt-4">
+        <div *ngIf="form.dirty" class="alert alert-info mt-4">
           <strong>Information: </strong>You have made changes. Any unsaved changes will be lost!
         </div>
       </div>

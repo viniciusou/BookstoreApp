@@ -14,6 +14,7 @@ export class BookListComponent implements OnInit {
   books: Book[];
   pagination: Pagination;
   bookParams: any = {};
+
   constructor(
     private bookService: BookService,
     private alertify: AlertifyService,
@@ -21,11 +22,12 @@ export class BookListComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.books = data['books'].result;
       this.pagination = data['books'].pagination;
     });
 
-    this.bookParams.orderBy = 'title';
+    this.getBooksOrder();
+
+    this.loadBooks();
   }
 
   pageChanged(event: any): void {
@@ -41,6 +43,15 @@ export class BookListComponent implements OnInit {
           this.pagination = res.pagination;
     }, error => {
       this.alertify.error(error);
+    }, () => {
+      sessionStorage.setItem('booksOrder', this.bookParams.orderBy);
     });
+  }
+
+  getBooksOrder() {
+    if (sessionStorage.getItem('booksOrder') == null) {
+      sessionStorage.setItem('booksOrder', 'title');
+    }
+    this.bookParams.orderBy = sessionStorage.getItem('booksOrder');
   }
 }

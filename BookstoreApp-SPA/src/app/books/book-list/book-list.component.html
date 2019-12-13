@@ -1,6 +1,6 @@
 <div class="container mt-3">
     <div class="float-left ml-3">
-      <h2>Books registered - {{pagination.totalItems}}</h2>
+      <h2>Total registered books: {{pagination.totalItems}}</h2>
     </div>
   <form class="form-inline" #form="ngForm" (ngSubmit)="loadBooks()" novalidate>
     <div class="col">
@@ -8,7 +8,9 @@
         <button type="button" name="orderBy" class="btn btn-primary"
           [(ngModel)]="bookParams.orderBy" (click)="loadBooks()" btnRadio="title">Title</button>
         <button type="button" name="orderBy" class="btn btn-primary" 
-          [(ngModel)]="bookParams.orderBy" (click)="loadBooks()" btnRadio="dateadded">Newest books</button>
+          [(ngModel)]="bookParams.orderBy" (click)="loadBooks()" btnRadio="datereleased">Released</button>
+          <button type="button" name="orderBy" class="btn btn-primary" 
+          [(ngModel)]="bookParams.orderBy" (click)="loadBooks()" btnRadio="dateadded">Added</button>  
       </div>
     </div>
   </form>
