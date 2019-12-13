@@ -9,7 +9,6 @@ using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 
 namespace BookstoreApp.API.Controllers
 {
@@ -21,22 +20,13 @@ namespace BookstoreApp.API.Controllers
 
         private readonly IBookstoreRepository _repo;
         private readonly IMapper _mapper;
-        private readonly IOptions<CloudinarySettings> _cloudinaryConfig;
-        private Cloudinary _cloudinary;
+        private readonly ICloudinaryConfig _cloudinaryConfig;
 
-        public PhotosController(IBookstoreRepository repo, IMapper mapper, IOptions<CloudinarySettings> cloudinaryConfig)
+        public PhotosController(IBookstoreRepository repo, IMapper mapper, ICloudinaryConfig cloudinaryConfig)
         {
             _mapper = mapper;
             _repo = repo;
             _cloudinaryConfig = cloudinaryConfig;
-
-            Account acc =  new Account (
-                _cloudinaryConfig.Value.CloudName,
-                _cloudinaryConfig.Value.ApiKey,
-                _cloudinaryConfig.Value.ApiSecret
-            );
-
-            _cloudinary = new Cloudinary(acc);
         }
 
         [HttpGet("{id}", Name = "GetPhoto")]
@@ -70,7 +60,7 @@ namespace BookstoreApp.API.Controllers
                             .Width(500).Height(500)
                     };
 
-                    uploadResult = _cloudinary.Upload(uploadParams);
+                    uploadResult = _cloudinaryConfig.Cloudinary.Upload(uploadParams);
                 }
             }
 
@@ -135,7 +125,7 @@ namespace BookstoreApp.API.Controllers
             {
                 var deleteParams = new DeletionParams(photoFromRepo.PublicId);
 
-                var result = _cloudinary.Destroy(deleteParams);
+                var result = _cloudinaryConfig.Cloudinary.Destroy(deleteParams);
 
                 if (result.Result == "ok")
                     _repo.Delete(photoFromRepo);

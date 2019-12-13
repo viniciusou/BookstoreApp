@@ -6,11 +6,9 @@ using BookstoreApp.API.Data;
 using BookstoreApp.API.Dtos;
 using BookstoreApp.API.Helpers;
 using BookstoreApp.API.Models;
-using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 
 namespace BookstoreApp.API.Controllers
 {
@@ -21,22 +19,12 @@ namespace BookstoreApp.API.Controllers
     {
         private readonly IBookstoreRepository _repo;
         private readonly IMapper _mapper;
-        private readonly IOptions<CloudinarySettings> _cloudinaryConfig;
-        private Cloudinary _cloudinary;
-
-        public BooksController(IBookstoreRepository repo, IMapper mapper, IOptions<CloudinarySettings> cloudinaryConfig)
+        private readonly ICloudinaryConfig _cloudinaryConfig;
+        public BooksController(IBookstoreRepository repo, IMapper mapper, ICloudinaryConfig cloudinaryConfig)
         {
             _repo = repo;
             _mapper = mapper;
             _cloudinaryConfig = cloudinaryConfig;
-
-            Account acc = new Account(
-                _cloudinaryConfig.Value.CloudName,
-                _cloudinaryConfig.Value.ApiKey,
-                _cloudinaryConfig.Value.ApiSecret
-            );
-
-            _cloudinary = new Cloudinary(acc);
         }
 
         [HttpPost]
@@ -65,7 +53,7 @@ namespace BookstoreApp.API.Controllers
                 if(photo.PublicId != null)
                 {
                     var deleteParams = new DeletionParams(photo.PublicId);
-                    _cloudinary.Destroy(deleteParams);
+                    _cloudinaryConfig.Cloudinary.Destroy(deleteParams);
                 }
             }
 

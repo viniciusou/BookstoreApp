@@ -10,7 +10,6 @@ using BookstoreApp.API.Helpers;
 using BookstoreApp.API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 using Moq;
 using NUnit.Framework;
 
@@ -29,10 +28,7 @@ namespace BookstoreApp.API.UnitTests.Controllers
         {
             _repo = new Mock<IBookstoreRepository>();
             var mapper = new Mock<IMapper>();
-            var cloudinaryConfig = new Mock<IOptions<CloudinarySettings>>();
-
-            var cloudinarySettings = new CloudinarySettings { CloudName = "cloudName" };
-            cloudinaryConfig.Setup(c => c.Value).Returns(cloudinarySettings);
+            var cloudinaryConfig = new Mock<ICloudinaryConfig>();
 
             _controller = new PhotosController(_repo.Object,
                 mapper.Object, cloudinaryConfig.Object);

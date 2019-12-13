@@ -42,6 +42,7 @@ namespace BookstoreApp.API
             services.AddScoped<IDataContext, DataContext>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IBookstoreRepository, BookstoreRepository>();
+            services.AddScoped<ICloudinaryConfig, CloudinaryConfig>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {
                     options.TokenValidationParameters = new TokenValidationParameters

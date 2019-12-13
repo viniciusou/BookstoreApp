@@ -15,7 +15,6 @@ namespace BookstoreApp.API.UnitTests.Controllers
     public class BooksControllerTests
     {
         private Mock<IBookstoreRepository> _repo;
-        private Mock<IMapper> _mapper;
         private BooksController _controller;
         private BookParams _bookParams;
 
@@ -23,8 +22,9 @@ namespace BookstoreApp.API.UnitTests.Controllers
         public void SetUp()
         {
             _repo = new Mock<IBookstoreRepository>();
-            _mapper = new Mock<IMapper>();
-            _controller = new BooksController(_repo.Object, _mapper.Object);
+            var mapper = new Mock<IMapper>();
+            var cloudinaryConfig = new Mock<ICloudinaryConfig>();
+            _controller = new BooksController(_repo.Object, mapper.Object, cloudinaryConfig.Object);
 
             _bookParams = new BookParams();
         }
