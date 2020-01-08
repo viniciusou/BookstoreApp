@@ -3,6 +3,11 @@
 Bookstore Inventory App. A web app that registers books and shows the list of books from a bookstore inventory.
 
 
+## Demo
+
+![BookstoreApp Demo](Video/bookstoreapp.gif)
+
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
